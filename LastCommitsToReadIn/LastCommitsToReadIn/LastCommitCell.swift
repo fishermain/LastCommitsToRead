@@ -18,10 +18,10 @@ class LastCommitCell: UITableViewCell
         super.awakeFromNib()
     }
     
-    func setUpUsing()
+    func setUpUsing(_ commit: Commit)
     {
-        authorLabel.text = ""
-        hashLabel.text = ""
-        messageLabel.text = ""
+        authorLabel.text = "Author: " + commit.commitAuthor
+        hashLabel.text = "Hash: " + commit.commitHash
+        messageLabel.text = "Message: " + commit.commitMessage
     }
 }
