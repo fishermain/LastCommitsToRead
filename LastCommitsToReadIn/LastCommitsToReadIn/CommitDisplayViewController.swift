@@ -35,10 +35,10 @@ class CommitDisplayViewController: UIViewController
         }
         var urlRequest = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 10.0 * 1000)
         urlRequest.httpMethod = "GET"
-        //urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
         urlRequest.addValue("application/vnd.github.cloak-preview+json", forHTTPHeaderField: "Accept")
-        //urlRequest.addValue("q=committer-date:>2020-12-12 sort:committer-date-desc", forHTTPHeaderField: "Query")
-        var commitShaString, commitMessageString, commitAuthorString: String
+        var commitShaString = ""
+        var commitMessageString = ""
+        var commitAuthorString = ""
         let task = URLSession.shared.dataTask(with: urlRequest)
             {
                 (data, response, error) -> Void in
@@ -62,9 +62,6 @@ class CommitDisplayViewController: UIViewController
                         {
                             for dict in items
                             {
-                                commitShaString = ""
-                                commitMessageString = ""
-                                commitAuthorString = ""
                                 if let commitDict = dict["commit"] as? [String: Any]
                                 {
                                     if let message = commitDict["message"] as? String
