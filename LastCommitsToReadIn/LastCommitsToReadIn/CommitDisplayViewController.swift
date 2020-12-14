@@ -53,8 +53,26 @@ class CommitDisplayViewController: UIViewController
                     print("Nil data received from fetching github service")
                     return
                 }
-                print("json = \(json)")
-                print("response code = \(String(describing: response))")
+                //print("json = \(json)")
+                //print("response code = \(String(describing: response))")
+                for dict in json
+                {
+                    if dict.key == "sha"
+                    {
+                        if let value = dict.value as? String
+                        {
+                           print("sha value = \(value)")
+                        }
+                        else
+                        {
+                            print("sha not found")
+                        }
+                    }
+                    else
+                    {
+                        print("sha key failed")
+                    }
+                }
             }
         task.resume()
     }
