@@ -28,7 +28,7 @@ class CommitDisplayViewController: UIViewController
     
     func getLatestCommits()
     {
-        guard let url = URL(string: "https://api.github.com/commits")
+        guard let url = URL(string: "https://api.github.com/search/commits?per_page=100&q=language:Swift&sort=committer-date&order=desc")
         else
         {
             return
@@ -37,7 +37,7 @@ class CommitDisplayViewController: UIViewController
         urlRequest.httpMethod = "GET"
         //urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
         urlRequest.addValue("application/vnd.github.cloak-preview+json", forHTTPHeaderField: "Accept")
-        urlRequest.addValue("q=committer-date:>2020-12-12 sort:committer-date-desc", forHTTPHeaderField: "Query")
+        //urlRequest.addValue("q=committer-date:>2020-12-12 sort:committer-date-desc", forHTTPHeaderField: "Query")
         let task = URLSession.shared.dataTask(with: urlRequest)
             {
                 (data, response, error) -> Void in
