@@ -88,6 +88,7 @@ class CommitDisplayViewController: UIViewController
                         }
                     }
                 }
+                self.latestCommitTableView.reloadData()
             }
         task.resume()
     }
