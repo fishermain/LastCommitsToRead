@@ -107,7 +107,6 @@
                                             <outlet property="authorLabel" destination="agW-h3-ww1" id="gQV-a9-r4b"/>
                                             <outlet property="hashLabel" destination="Lh2-ie-icd" id="pg6-FU-8hy"/>
                                             <outlet property="messageLabel" destination="IKl-gy-Ks9" id="BY6-lE-4kz"/>
-                                            <segue destination="PZ5-n0-fOa" kind="show" id="OH3-kZ-B6E"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -134,10 +133,10 @@
             </objects>
             <point key="canvasLocation" x="891" y="75"/>
         </scene>
-        <!--View Controller-->
+        <!--Commit Details View Controller-->
         <scene sceneID="hIu-8Z-OeE">
             <objects>
-                <viewController id="PZ5-n0-fOa" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CommitDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PZ5-n0-fOa" customClass="CommitDetailsViewController" customModule="LastCommitsToReadIn" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3h0-sQ-iXm"/>
                         <viewControllerLayoutGuide type="bottom" id="jUt-s4-88I"/>
@@ -147,10 +146,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBP-lh-RZm">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uy0-0n-uQ9">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="277.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="277"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Author]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8H-Ql-5fd">
                                                 <rect key="frame" x="15" y="40" width="384" height="21"/>
@@ -161,17 +160,14 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Hash]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wZ-hw-EdM">
-                                                <rect key="frame" x="15" y="141" width="384" height="21"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="21" id="tr3-jk-n2i"/>
-                                                </constraints>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Hash]" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wZ-hw-EdM">
+                                                <rect key="frame" x="15" y="141" width="384" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Message]" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GtJ-9s-LUe">
-                                                <rect key="frame" x="15" y="242" width="384" height="20.5"/>
+                                                <rect key="frame" x="15" y="241.5" width="384" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -210,6 +206,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7Gv-Vg-U07"/>
+                    <connections>
+                        <outlet property="detailsAuthorLabel" destination="I8H-Ql-5fd" id="4NR-RG-AnD"/>
+                        <outlet property="detailsHashLabel" destination="3wZ-hw-EdM" id="3OW-Ox-Sgo"/>
+                        <outlet property="detailsMessageLabel" destination="GtJ-9s-LUe" id="Ucv-Pr-Cya"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FQy-E9-wz3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

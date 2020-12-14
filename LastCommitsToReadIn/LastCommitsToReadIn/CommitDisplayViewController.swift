@@ -124,6 +124,13 @@ extension CommitDisplayViewController: UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         tableView.deselectRow(at: indexPath, animated: false)
+        let commit = commitArray[indexPath.row]
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        if let commitDetails = storyboard.instantiateViewController(withIdentifier: "CommitDetailsViewController") as? CommitDetailsViewController
+        {
+            commitDetails.commit = commit
+            navigationController?.pushViewController(commitDetails, animated: true)
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat

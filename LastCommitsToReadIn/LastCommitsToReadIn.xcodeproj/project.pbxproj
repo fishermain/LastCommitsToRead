@@ -15,6 +15,7 @@
 		3BD7A51E258701090025B665 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BD7A51C258701090025B665 /* LaunchScreen.storyboard */; };
 		3BE5E9662587178600BA2D6F /* LastCommitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5E9652587178600BA2D6F /* LastCommitCell.swift */; };
 		3BE5E97225871B5600BA2D6F /* CommitDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5E97125871B5600BA2D6F /* CommitDisplayViewController.swift */; };
+		3BE5E9762587281900BA2D6F /* CommitDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5E9752587281900BA2D6F /* CommitDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3BD7A51F258701090025B665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BE5E9652587178600BA2D6F /* LastCommitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastCommitCell.swift; sourceTree = "<group>"; };
 		3BE5E97125871B5600BA2D6F /* CommitDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitDisplayViewController.swift; sourceTree = "<group>"; };
+		3BE5E9752587281900BA2D6F /* CommitDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				3BD7A51F258701090025B665 /* Info.plist */,
 				3BE5E9652587178600BA2D6F /* LastCommitCell.swift */,
 				3BE5E97125871B5600BA2D6F /* CommitDisplayViewController.swift */,
+				3BE5E9752587281900BA2D6F /* CommitDetailsViewController.swift */,
 			);
 			path = LastCommitsToReadIn;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			files = (
 				3BE5E9662587178600BA2D6F /* LastCommitCell.swift in Sources */,
 				3BD7A516258701090025B665 /* StartViewController.swift in Sources */,
+				3BE5E9762587281900BA2D6F /* CommitDetailsViewController.swift in Sources */,
 				3BD7A512258701090025B665 /* AppDelegate.swift in Sources */,
 				3BE5E97225871B5600BA2D6F /* CommitDisplayViewController.swift in Sources */,
 				3BD7A514258701090025B665 /* SceneDelegate.swift in Sources */,
