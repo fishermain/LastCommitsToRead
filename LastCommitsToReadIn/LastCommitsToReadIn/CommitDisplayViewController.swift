@@ -88,8 +88,11 @@ class CommitDisplayViewController: UIViewController
                         }
                     }
                 }
-                self.latestCommitTableView.reloadData()
-            }
+                DispatchQueue.main.async
+                {
+                    self.commitDisplayTableView.reloadData()
+                }
+        }
         task.resume()
     }
 }
