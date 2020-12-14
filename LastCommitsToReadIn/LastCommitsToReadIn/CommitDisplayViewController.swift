@@ -54,40 +54,35 @@ class CommitDisplayViewController: UIViewController
                     print("Nil data received from fetching github service")
                     return
                 }
-                //print("json = \(json)")
-                //print("response code = \(String(describing: response))")
                 for dict in json
                 {
-                    /*if dict.key == "sha"
-                    {
-                        if let value = dict.value as? String
-                        {
-                           print("sha value = \(value)")
-                        }
-                        else
-                        {
-                            print("sha not found")
-                        }
-                    }
-                    else
-                    {
-                        print("sha key failed")
-                    }*/
-                    //print("dict = \(dict)")
                     if dict.key == "items"
                     {
                         if let items = dict.value as? [[String: Any]]
                         {
-                            print("found items array = \(items.count)")
+                            for dict in items
+                            {
+                                if let commitDict = dict["commit"] as? [String: Any]
+                                {
+                                    if let message = commitDict["message"] as? String
+                                    {
+                                        commitMessageString = message
+                                    }
+                                    if let authorDict = commitDict["author"] as? [String: Any]
+                                    {
+                                        if let author = authorDict["name"] as? String
+                                        {
+                                            commitAuthorString = author
+                                        }
+                                    }
+                                    if let shaValue = dict["sha"] as? String
+                                    {
+                                        commitShaString = shaValue
+                                    }
+                                }
+                                self.commitArray.append(Commit(commitAuthor: commitAuthorString, commitHash: commitShaString, commitMessage: commitMessageString))
+                            }
                         }
-                        else
-                        {
-                            print("failed at items array")
-                        }
-                    }
-                    else
-                    {
-                        print("items key failed")
                     }
                 }
             }
