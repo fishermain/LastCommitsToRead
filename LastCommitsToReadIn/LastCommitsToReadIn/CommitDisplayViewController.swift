@@ -17,6 +17,7 @@ struct Commit
 class CommitDisplayViewController: UIViewController
 {
     @IBOutlet weak var commitDisplayTableView: UITableView!
+    var commitArray: [Commit] = []
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -33,11 +34,18 @@ extension CommitDisplayViewController: UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 25
+        return commitArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
+        let cellIdentifier = "lastCommitCell"
+        if let cell = commitDisplayTableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? LastCommitCell
+        {
+            let commit = commitArray[indexPath.row]
+            cell.setUpUsing(commit)
+            return cell
+        }
         return UITableViewCell()
     }
 }
