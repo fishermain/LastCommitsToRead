@@ -22,6 +22,37 @@ class CommitDisplayViewController: UIViewController
     {
         super.viewDidLoad()
         title = "Last Commits To Read In"
+        commitDisplayTableView.tableFooterView = UIView()
+        getLatestCommits()
+    }
+    
+    func getLatestCommits()
+    {
+        guard let url = URL(string: "https://api.github.com/")
+        else
+        {
+            return
+        }
+        var urlRequest = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 10.0 * 1000)
+        urlRequest.httpMethod = "GET"
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
+        let task = URLSession.shared.dataTask(with: urlRequest)
+            {
+                (data, response, error) -> Void in
+                guard error == nil
+                else
+                {
+                    print("Error while fetching github: \(String(describing: error))")
+                    return
+                }
+                guard let data = data, let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any]
+                else
+                {
+                    print("Nil data received from fetching github service")
+                    return
+                }
+            }
+        task.resume()
     }
 }
 
