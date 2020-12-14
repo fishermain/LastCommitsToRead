@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		3BD7A512258701090025B665 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7A511258701090025B665 /* AppDelegate.swift */; };
 		3BD7A514258701090025B665 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7A513258701090025B665 /* SceneDelegate.swift */; };
-		3BD7A516258701090025B665 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7A515258701090025B665 /* ViewController.swift */; };
+		3BD7A516258701090025B665 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7A515258701090025B665 /* StartViewController.swift */; };
 		3BD7A519258701090025B665 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BD7A517258701090025B665 /* Main.storyboard */; };
 		3BD7A51B258701090025B665 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BD7A51A258701090025B665 /* Assets.xcassets */; };
 		3BD7A51E258701090025B665 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BD7A51C258701090025B665 /* LaunchScreen.storyboard */; };
+		3BE5E9662587178600BA2D6F /* LastCommitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5E9652587178600BA2D6F /* LastCommitCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3BD7A50E258701090025B665 /* LastCommitsToReadIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LastCommitsToReadIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BD7A511258701090025B665 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BD7A513258701090025B665 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3BD7A515258701090025B665 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3BD7A515258701090025B665 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		3BD7A518258701090025B665 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3BD7A51A258701090025B665 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BD7A51D258701090025B665 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BD7A51F258701090025B665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BE5E9652587178600BA2D6F /* LastCommitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastCommitCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +60,12 @@
 			children = (
 				3BD7A511258701090025B665 /* AppDelegate.swift */,
 				3BD7A513258701090025B665 /* SceneDelegate.swift */,
-				3BD7A515258701090025B665 /* ViewController.swift */,
+				3BD7A515258701090025B665 /* StartViewController.swift */,
 				3BD7A517258701090025B665 /* Main.storyboard */,
 				3BD7A51A258701090025B665 /* Assets.xcassets */,
 				3BD7A51C258701090025B665 /* LaunchScreen.storyboard */,
 				3BD7A51F258701090025B665 /* Info.plist */,
+				3BE5E9652587178600BA2D6F /* LastCommitCell.swift */,
 			);
 			path = LastCommitsToReadIn;
 			sourceTree = "<group>";
@@ -137,7 +140,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BD7A516258701090025B665 /* ViewController.swift in Sources */,
+				3BE5E9662587178600BA2D6F /* LastCommitCell.swift in Sources */,
+				3BD7A516258701090025B665 /* StartViewController.swift in Sources */,
 				3BD7A512258701090025B665 /* AppDelegate.swift in Sources */,
 				3BD7A514258701090025B665 /* SceneDelegate.swift in Sources */,
 			);

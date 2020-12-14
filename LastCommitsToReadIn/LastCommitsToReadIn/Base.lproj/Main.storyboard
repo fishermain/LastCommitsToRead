@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Start View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LastCommitsToReadIn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StartViewController" customModule="LastCommitsToReadIn" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AyK-Q3-i3J"/>
                         <viewControllerLayoutGuide type="bottom" id="CJf-uk-H6m"/>
@@ -48,7 +48,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="144" id="wtT-S7-qaw">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="lastCommitCell" rowHeight="144" id="wtT-S7-qaw" customClass="LastCommitCell" customModule="LastCommitsToReadIn" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="144"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wtT-S7-qaw" id="ut2-Fe-U0r">
@@ -97,6 +97,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="authorLabel" destination="wYk-HQ-36h" id="a2F-zs-d8l"/>
+                                    <outlet property="hashLabel" destination="eiA-jZ-m7D" id="dk5-5D-BTi"/>
+                                    <outlet property="messageLabel" destination="KLt-MT-wVW" id="Q4N-IC-Dkq"/>
                                     <segue destination="PZ5-n0-fOa" kind="show" id="KCa-n4-Zer"/>
                                 </connections>
                             </tableViewCell>

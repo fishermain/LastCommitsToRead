@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  StartViewController.swift
 //  LastCommitsToReadIn
 //
 //  Created by Edgar Jr on 12/13/20.
@@ -7,9 +7,8 @@
 
 import UIKit
 
-class ViewController: UIViewController
+class StartViewController: UIViewController
 {
-
     override func viewDidLoad()
     {
         super.viewDidLoad()
