@@ -12,5 +12,6 @@ class StartViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        title = "Last Commits To Read In"
     }
 }
