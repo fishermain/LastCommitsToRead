@@ -28,7 +28,7 @@ class CommitDisplayViewController: UIViewController
     
     func getLatestCommits()
     {
-        guard let url = URL(string: "https://api.github.com/")
+        guard let url = URL(string: "https://api.github.com/commits")
         else
         {
             return
@@ -36,6 +36,7 @@ class CommitDisplayViewController: UIViewController
         var urlRequest = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 10.0 * 1000)
         urlRequest.httpMethod = "GET"
         urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
+        urlRequest.addValue("q=committer-date:>2020-12-12 sort:committer-date-desc", forHTTPHeaderField: "Query")
         let task = URLSession.shared.dataTask(with: urlRequest)
             {
                 (data, response, error) -> Void in
