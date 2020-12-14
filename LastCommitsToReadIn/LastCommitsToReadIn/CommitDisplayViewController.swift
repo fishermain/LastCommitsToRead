@@ -62,6 +62,9 @@ class CommitDisplayViewController: UIViewController
                         {
                             for dict in items
                             {
+                                commitShaString = ""
+                                commitMessageString = ""
+                                commitAuthorString = ""
                                 if let commitDict = dict["commit"] as? [String: Any]
                                 {
                                     if let message = commitDict["message"] as? String
