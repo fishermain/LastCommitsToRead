@@ -35,7 +35,8 @@ class CommitDisplayViewController: UIViewController
         }
         var urlRequest = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 10.0 * 1000)
         urlRequest.httpMethod = "GET"
-        urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
+        //urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
+        urlRequest.addValue("application/vnd.github.cloak-preview+json", forHTTPHeaderField: "Accept")
         urlRequest.addValue("q=committer-date:>2020-12-12 sort:committer-date-desc", forHTTPHeaderField: "Query")
         let task = URLSession.shared.dataTask(with: urlRequest)
             {
