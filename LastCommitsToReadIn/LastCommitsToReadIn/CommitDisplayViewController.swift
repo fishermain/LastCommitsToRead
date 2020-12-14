@@ -38,6 +38,7 @@ class CommitDisplayViewController: UIViewController
         //urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
         urlRequest.addValue("application/vnd.github.cloak-preview+json", forHTTPHeaderField: "Accept")
         //urlRequest.addValue("q=committer-date:>2020-12-12 sort:committer-date-desc", forHTTPHeaderField: "Query")
+        var commitShaString, commitMessageString, commitAuthorString: String
         let task = URLSession.shared.dataTask(with: urlRequest)
             {
                 (data, response, error) -> Void in
@@ -57,7 +58,7 @@ class CommitDisplayViewController: UIViewController
                 //print("response code = \(String(describing: response))")
                 for dict in json
                 {
-                    if dict.key == "sha"
+                    /*if dict.key == "sha"
                     {
                         if let value = dict.value as? String
                         {
@@ -71,7 +72,8 @@ class CommitDisplayViewController: UIViewController
                     else
                     {
                         print("sha key failed")
-                    }
+                    }*/
+                    print("dict = \(dict)")
                 }
             }
         task.resume()
