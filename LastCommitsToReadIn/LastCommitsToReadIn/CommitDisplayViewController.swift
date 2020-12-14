@@ -73,7 +73,22 @@ class CommitDisplayViewController: UIViewController
                     {
                         print("sha key failed")
                     }*/
-                    print("dict = \(dict)")
+                    //print("dict = \(dict)")
+                    if dict.key == "items"
+                    {
+                        if let items = dict.value as? [[String: Any]]
+                        {
+                            print("found items array = \(items.count)")
+                        }
+                        else
+                        {
+                            print("failed at items array")
+                        }
+                    }
+                    else
+                    {
+                        print("items key failed")
+                    }
                 }
             }
         task.resume()
