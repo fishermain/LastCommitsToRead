@@ -51,6 +51,8 @@ class CommitDisplayViewController: UIViewController
                     print("Nil data received from fetching github service")
                     return
                 }
+                print("json = \(json)")
+                print("response code = \(String(describing: response))")
             }
         task.resume()
     }
